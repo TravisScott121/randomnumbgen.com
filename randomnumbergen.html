@@ -1,0 +1,69 @@
+<html>
+  <head>
+    <style>
+      body {
+        font-family: sans-serif;
+        background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+        background-size: 400% 400%;
+        animation: gradient 15s ease infinite;
+      }
+
+      @keyframes gradient {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      p {
+        max-width: 700px;
+        margin: 0 auto;
+        padding: 20px;
+        text-align: justify;
+        font-weight: bold;
+      }
+
+      #button {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        font-size: 24px;
+        padding: 20px 50px;
+        border: none;
+        cursor: pointer;
+        border-radius: 0;
+      }
+
+      #button:hover {
+        background-color: lightgrey;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      Welcome to our website! Our button is a fun and handy tool that generates random four-digit numbers for you to use whenever you need them. Whether you're playing a game, creating a password, or just looking for a bit of inspiration, our generator is here to help. With a simple click of the button, you can get a completely unique and random four-digit number that you can use for whatever purpose you need.
+    </p>
+    <p>
+      There are many reasons why a random four-digit number generator can be a useful tool. For one, it helps to ensure that your passwords and other sensitive information are truly random and not easily guessable. It can also be a great way to add a bit of excitement and unpredictability to games or other activities. Plus, our generator is completely free to use, so you can get as many random numbers as you need without any hassle or expense.
+    </p>
+    <p>
+      So why wait? Give our button a try and see how it can help you out. You never know when you might need a random four-digit number, so it's always good to have one handy! Thank you for visiting our website and we hope you enjoy using our generator.
+    </p>
+    <button id="button" onclick="generateNumber()">Click me</button>
+    <div id="result" style="display: none;"></div>
+
+    <script>
+      function generateNumber() {
+        var randomNumber = Math.floor(Math.random() * 10000);
+        document.getElementById("button").innerHTML = randomNumber;
+      }
+    </script>
+  </body>
+</html>
